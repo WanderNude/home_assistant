@@ -48,8 +48,8 @@ climate:
 notify:
   - name: homeNotification
     platform: smtp
-    sender: homeNotification@uden.com
-    recipient: udenx005@gmail.com
+    sender: !secret email_sender
+    recipient: !secret email_primary
 
 automation: !include_dir_merge_list automations/
 device_tracker: !include device_presence.yaml
