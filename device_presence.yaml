@@ -1,0 +1,14 @@
+###################################################
+#               LOCAL DEVICE DETECTION
+###################################################
+- platform: unifi
+  host: 192.168.1.5
+  port: 8443
+  username: udenx005
+  password: Remington700
+  verify_ssl: False
+  interval_seconds: 10
+  consider_home: 30
+  new_device_defaults:
+    track_new_devices: false
+    hide_if_away: false

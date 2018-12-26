@@ -1,0 +1,12 @@
+- alias: freezer_alert
+  trigger:
+    platform: state
+    entity_id: binary_sensor.door_sensor_freezer_sensor
+    to: 'on'
+    for:
+      minutes: 5
+  action:
+    service: notify.homeNotification
+    data:
+      title: FREEZER ALERT
+      message: Freezer open for longer than 5 minutes!

@@ -1,0 +1,59 @@
+###########################################################
+#                         VIEWS
+#
+# NOTES:
+#   MUST BE IN ORDER FOR DISPLAY TO BE IN
+# CORRECT ORDER ON HOME SCREEN
+###########################################################
+thermostat:
+  view: yes
+  name: Thermostat
+  icon: mdi:thermometer-lines
+  entities:
+    - sensor.linear_tbz48_thermostat_temperature
+    - sensor.liesel_multi_temperature
+    - history_graph.room_temperatures
+    - climate.linear_tbz48_thermostat_cooling_1
+    - climate.linear_tbz48_thermostat_heating_1
+
+weather:
+  view: yes
+  name: Weather
+  icon: mdi:weather-lightning-rainy
+  entities:
+    - group.at_a_glance
+    - group.current_weather
+    - group.forecast
+    - history_graph.outside_temperature
+
+lights:
+  view: yes
+  name: Lights
+  icon: mdi:lightbulb
+  entities:
+    - group.furnace
+
+presence:
+  view: yes
+  name: Presence
+  icon: mdi:google-maps
+  entities:
+    - group.adults
+    - input_boolean.away_mode
+    - group.vacation_return_date
+
+network:
+  view: yes
+  name: Tech
+  icon: mdi:server-network
+  entities:
+    - group.pihole
+    - group.speedtest
+
+safety:
+  view: yes
+  name: Safety/Security
+  icon: mdi:alert
+  entities:
+    - group.freezer
+    - automation.freezer_alert

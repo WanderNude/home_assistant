@@ -1,0 +1,4 @@
+away_mode:
+  name: Set Away Mode
+  initial: Off
+  icon: mdi:beach

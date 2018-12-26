@@ -1,0 +1,23 @@
+gr1:
+  name: Room Temperatures
+  hours_to_show: 24
+  refresh: 300
+  entities:
+    - sensor.liesel_multi_temperature
+    - sensor.linear_tbz48_thermostat_temperature
+
+gr2:
+  name: SpeedTest
+  hours_to_show: 24
+  refresh: 300
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+
+gr3:
+  name: Outside Temperature
+  hours_to_show: 24
+  refresh: 300
+  entities:
+    - sensor.dark_sky_temperature
+    - sensor.dark_sky_apparent_temperature

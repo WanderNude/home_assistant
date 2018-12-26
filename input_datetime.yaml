@@ -1,0 +1,4 @@
+vacation_return_date:
+  name: Vacation Return Date
+  has_date: true
+  has_time: false

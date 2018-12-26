@@ -1,0 +1,27 @@
+###########################################################
+# TURN ON FURNACE ROOM LIGHTS WHEN MOTION DETECTED
+###########################################################
+- alias: furnace_lights_on
+  trigger:
+    platform: state
+    entity_id: binary_sensor.ir_motion_furnace_sensor
+    from: "off"
+    to: "on"
+  action:
+    service: switch.turn_on
+    data:
+      entity_id: switch.furnace_light_switch
+
+###########################################################
+# TURN OFF FURNACE ROOM LIGHTS WHEN NO MOTION DETECTED FOR 4 MINUTES
+###########################################################
+- alias: furnace_lights_off
+  trigger:
+    platform: state
+    entity_id: binary_sensor.ir_motion_furnace_sensor
+    from: "on"
+    to: "off"
+  action:
+    service: switch.turn_off
+    data:
+      entity_id: switch.furnace_light_switch

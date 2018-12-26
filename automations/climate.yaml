@@ -1,0 +1,129 @@
+#######################################################
+#                  Morning
+#######################################################
+- alias: "Morning Temperature"
+  trigger:
+    platform: sun
+    event: sunrise
+  condition:
+    - condition: state
+      entity_id: input_boolean.away_mode
+      state: 'off'
+  action:
+    - service: climate.set_temperature
+      data:
+        entity_id: climate.linear_tbz48_thermostat_cooling_1
+        temperature: 72
+    - service: climate.set_temperature
+      data:
+        entity_id: climate.linear_tbz48_thermostat_heating_1
+        temperature: 68
+
+#######################################################
+#                  Evening
+#######################################################
+- alias: "Evening Temperature"
+  trigger:
+    platform: sun
+    event: sunset
+  condition:
+    - condition: state
+      entity_id: input_boolean.away_mode
+      state: 'off'
+  action:
+    - service: climate.set_temperature
+      data:
+        entity_id: climate.linear_tbz48_thermostat_cooling_1
+        temperature: 72
+    - service: climate.set_temperature
+      data:
+        entity_id: climate.linear_tbz48_thermostat_heating_1
+        temperature: 69
+
+#######################################################
+#                  1 AM Winter Chill
+#######################################################
+- alias: "Winter Chill"
+  trigger:
+    platform: time
+    at: '01:00:00'
+  condition:
+    - condition: state
+      entity_id: input_boolean.away_mode
+      state: 'off'
+    - condition: numeric_state
+      entity_id: sensor.dark_sky_temperature
+      below: 15
+  action:
+    - service: climate.set_temperature
+      data:
+        entity_id: climate.linear_tbz48_thermostat_cooling_1
+        temperature: 72
+    - service: climate.set_temperature
+      data:
+        entity_id: climate.linear_tbz48_thermostat_heating_1
+        temperature: 70
+
+#######################################################
+#                  Away Mode On
+#######################################################
+  trigger:
+    platform: state
+    entity_id: binary_sensor.away_mode
+    to: 'on'
+  action:
+    - service: climate.set_temperature
+      data:
+        entity_id: climate.linear_tbz48_thermostat_cooling_1
+        temperature: 85
+    - service: climate.set_temperature
+      data:
+        entity_id: climate.linear_tbz48_thermostat_heating_1
+        temperature: 60
+
+#######################################################
+#                  Return From Vacation
+#######################################################
+- alias: "Away Mode Off"
+  trigger:
+    platform: state
+    entity_id: binary_sensor.away_mode
+    to: 'off'
+  action:
+    - service: climate.set_temperature
+      data:
+        entity_id: climate.linear_tbz48_thermostat_cooling_1
+        temperature: 72
+    - service: climate.set_temperature
+      data:
+        entity_id: climate.linear_tbz48_thermostat_heating_1
+        temperature: 70
+    - service: climate.set_operation_mode
+      data:
+        operation_mode: auto
+
+#######################################################
+#                  Start Return Warm
+#######################################################
+- alias: "Vacation Return Kickstart"
+  trigger:
+    platform: time
+    at: '12:00:00'
+  condition:
+    - condition: state
+      entity_id: input_boolean.away_mode
+      state: 'on'
+    - condition: template
+      value_template: "{{ states('sensor.date') == (states.input_datetime.vacation_return_date.attributes.timestamp | int | timestamp_custom('%H:%M', False)) }}"
+  action:
+    - service: climate.set_temperature
+      data:
+        entity_id: climate.linear_tbz48_thermostat_cooling_1
+        temperature: 72
+    - service: climate.set_temperature
+      data:
+        entity_id: climate.linear_tbz48_thermostat_heating_1
+        temperature: 70
+    - service: climate.set_operation_mode
+      data:
+        operation_mode: auto

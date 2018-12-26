@@ -1,0 +1,19 @@
+daytime_temp:
+  name: Target Daytime Temperature
+  initial: 70
+  min: 60
+  max: 80
+  step: 1
+  unit_of_measurement: step
+  mode: box
+  icon: mdi:thermometer-lines
+
+nighttime_temp:
+  name: Target Nighttime Temperature
+  initial: 68
+  min: 60
+  max: 80
+  step: 1
+  unit_of_measurement: step
+  mode: box
+  icon: mdi:thermometer-lines

@@ -1,0 +1,5 @@
+device_tracker.samsungsmg930a_2:
+  icon: mdi:cellphone-android
+
+device_tracker.samsungsmg930a:
+  icon: mdi:cellphone-android
