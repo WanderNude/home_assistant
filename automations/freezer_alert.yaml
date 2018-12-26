@@ -1,3 +1,6 @@
+########################################################
+#     SENDS EMAIL WHEN FREEZER DOOR OPEN TOO LONG
+########################################################
 - alias: freezer_alert
   trigger:
     platform: state
