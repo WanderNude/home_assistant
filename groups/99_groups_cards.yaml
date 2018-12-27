@@ -41,10 +41,10 @@ furnace:
 forecast:
   name: Today's Forecast
   entities:
-    - sensor.dark_sky_daily_high_apparent_temperature
-    - sensor.dark_sky_daily_high_temperature
-    - sensor.dark_sky_daily_low_apparent_temperature
-    - sensor.dark_sky_daily_low_temperature
+    - sensor.dark_sky_daytime_high_temperature
+    - sensor.dark_sky_overnight_low_temperature
+    - sensor.dark_sky_daytime_high_apparent_temperature
+    - sensor.dark_sky_overnight_low_apparent_temperature
     - sensor.dark_sky_precip_probability
 
 freezer:

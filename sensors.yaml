@@ -27,10 +27,10 @@
     - cloud_cover
     - humidity
     - pressure
-    - temperature_max
-    - temperature_min
-    - apparent_temperature_max
-    - apparent_temperature_min
+    - temperature_high
+    - temperature_low
+    - apparent_temperature_high
+    - apparent_temperature_low
 
 - platform: time_date
   display_options:

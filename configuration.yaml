@@ -16,7 +16,7 @@ config:
 
 http:
   # Uncomment this to add a password (recommended!)
-  api_password: !secret http_password
+  #api_password: !secret http_password #legacy item unneeded 20181227
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   # base_url: example.duckdns.org:8123
 
@@ -51,6 +51,8 @@ notify:
     sender: !secret email_sender
     recipient:
       - !secret email_primary
+    server: localhost
+    port: 25
     debug: true
 
 automation: !include_dir_merge_list automations/
