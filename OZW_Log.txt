@@ -1029,3 +1029,25 @@
 2018-12-27 15:31:33.468 Info,          Node query processing complete except for sleeping nodes.
 2018-12-27 15:31:33.468 Detail, Node014, Notification: NodeQueriesComplete
 2018-12-27 15:31:33.468 Detail, contrlr, Notification: AwakeNodesQueried
+2018-12-27 15:36:13.900 Detail, Node015,   Received: 0x01, 0x0c, 0x00, 0x04, 0x00, 0x0f, 0x06, 0x31, 0x05, 0x01, 0x4a, 0x18, 0xdb, 0x42
+2018-12-27 15:36:13.900 Detail, 
+2018-12-27 15:36:13.900 Info, Node015, Received SensorMultiLevel report from node 15, instance 1, Temperature: value=63.63F
+2018-12-27 15:36:13.900 Detail, Node015, Initial read of value
+2018-12-27 15:36:13.900 Detail, Node015, Notification: ValueChanged
+2018-12-27 15:36:14.058 Detail, Node015,   Received: 0x01, 0x0c, 0x00, 0x04, 0x00, 0x0f, 0x06, 0x31, 0x05, 0x05, 0x42, 0x09, 0xf6, 0x72
+2018-12-27 15:36:14.058 Detail, 
+2018-12-27 15:36:14.058 Info, Node015, Received SensorMultiLevel report from node 15, instance 1, Relative Humidity: value=25.50%
+2018-12-27 15:36:14.058 Detail, Node015, Initial read of value
+2018-12-27 15:36:14.058 Detail, Node015, Notification: ValueChanged
+2018-12-27 15:36:14.216 Detail, Node015,   Received: 0x01, 0x0c, 0x00, 0x04, 0x00, 0x0f, 0x06, 0x31, 0x05, 0x03, 0x42, 0x00, 0x68, 0xe3
+2018-12-27 15:36:14.216 Detail, 
+2018-12-27 15:36:14.216 Info, Node015, Received SensorMultiLevel report from node 15, instance 1, Luminance: value=1.04%
+2018-12-27 15:36:14.216 Detail, Node015, Initial read of value
+2018-12-27 15:36:14.216 Detail, Node015, Notification: ValueChanged
+2018-12-27 15:36:14.368 Detail, Node015,   Received: 0x01, 0x09, 0x00, 0x04, 0x00, 0x0f, 0x03, 0x80, 0x03, 0xff, 0x82
+2018-12-27 15:36:14.368 Detail, 
+2018-12-27 15:36:14.368 Info, Node015, Received Battery report from node 15: level=0
+2018-12-27 15:36:14.368 Detail, Node015, Initial read of value
+2018-12-27 15:36:14.368 Detail, Node015, Notification: ValueChanged
+2018-12-27 15:36:14.370 Warning, Exception: Manager.cpp:2499 - 102 - ValueID passed to GetValueFloatPrecision is not a Decimal Value
+2018-12-27 15:36:14.370 Warning, Exception: Manager.cpp:2499 - 102 - ValueID passed to GetValueFloatPrecision is not a Decimal Value

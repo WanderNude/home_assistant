@@ -8,4 +8,7 @@ OZW*
 home-assistant*
 plex.conf
 pyozw*
+.storage/
+options.xml
+zwscene.xml
 
