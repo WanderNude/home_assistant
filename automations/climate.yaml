@@ -1,7 +1,7 @@
 #######################################################
 #                  Morning
 #######################################################
-- alias: "Morning Temperature"
+- alias: "Climate Morning Temperature"
   trigger:
     platform: sun
     event: sunrise
@@ -22,7 +22,7 @@
 #######################################################
 #                  Evening
 #######################################################
-- alias: "Evening Temperature"
+- alias: "Climate Evening Temperature"
   trigger:
     platform: sun
     event: sunset
@@ -43,7 +43,7 @@
 #######################################################
 #                  1 AM Winter Chill
 #######################################################
-- alias: "Winter Chill"
+- alias: "Climate Winter Chill"
   trigger:
     platform: time
     at: '01:00:00'
@@ -67,7 +67,7 @@
 #######################################################
 #                  Away Mode On
 #######################################################
-- alias: "Away Mode On"
+- alias: "Climate Away Mode On"
   trigger:
     platform: state
     entity_id: input_boolean.away_mode
@@ -88,7 +88,7 @@
 #######################################################
 #                  Return From Vacation
 #######################################################
-- alias: "Away Mode Off"
+- alias: "Climate Away Mode Off"
   trigger:
     platform: state
     entity_id: input_boolean.away_mode
@@ -109,7 +109,7 @@
 #######################################################
 #                  Start Return Warm
 #######################################################
-- alias: "Vacation Return Kickstart"
+- alias: "Climate Vacation Return Kickstart"
   trigger:
     platform: time
     at: '12:00:00'

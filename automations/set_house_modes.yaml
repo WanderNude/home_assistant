@@ -1,7 +1,7 @@
 ###########################################################
 # SET HOUSE TO AWAY MODE AFTER BEING GONE FOR X HOURS
 ###########################################################
-- alias: away_mode_on
+- alias: "Away Mode Activate"
   trigger:
     platform: state
     entity_id: group.adults
@@ -19,7 +19,7 @@
 ###########################################################
 # TAKE HOUSE OFF AWAY MODE WHEN RETURNED FROM VACATION
 ###########################################################
-- alias: away_mode_off
+- alias: "Away Mode Deactivate"
   trigger:
     platform: state
     entity_id: group.adults
