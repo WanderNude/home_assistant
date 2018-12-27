@@ -81,6 +81,9 @@
       data:
         entity_id: climate.linear_tbz48_thermostat_heating_1
         temperature: 60
+    - service: climate.set_operation_mode
+      data:
+        operation_mode: auto
 
 #######################################################
 #                  Return From Vacation
@@ -88,7 +91,7 @@
 - alias: "Away Mode Off"
   trigger:
     platform: state
-    entity_id: binary_sensor.away_mode
+    entity_id: input_boolean.away_mode
     to: 'off'
   action:
     - service: climate.set_temperature
