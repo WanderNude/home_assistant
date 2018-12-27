@@ -58,8 +58,8 @@ notify:
 automation: !include_dir_merge_list automations/
 device_tracker: !include device_presence.yaml
 group: !include_dir_merge_named groups/
-history_graph: !include graphs.yaml
+history_graph: !include graphs/graphs.yaml
 input_boolean: !include inputs/input_boolean.yaml
 input_datetime: !include inputs/input_datetime.yaml
 input_number: !include inputs/input_number.yaml
-sensor: !include sensors.yaml
+sensor: !include sensors/sensors.yaml
