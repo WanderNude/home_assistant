@@ -49,7 +49,9 @@ notify:
   - name: homeNotification
     platform: smtp
     sender: !secret email_sender
-    recipient: !secret email_primary
+    recipient:
+      - !secret email_primary
+    debug: true
 
 automation: !include_dir_merge_list automations/
 device_tracker: !include device_presence.yaml
