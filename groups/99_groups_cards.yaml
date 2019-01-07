@@ -8,7 +8,7 @@ adults:
     - device_tracker.samsungsmg930a_2
 
 at_a_glance:
-  name: At-A-Glance
+  name: "At A Glance"
   entities:
     - sensor.dark_sky_temperature
     - sensor.dark_sky_apparent_temperature
@@ -22,6 +22,7 @@ current_weather:
     - sun.sun
     - sensor.dark_sky_summary
     - sensor.dark_sky_temperature
+    - sensor.dark_sky_temperature_2
     - sensor.dark_sky_apparent_temperature
     - sensor.dark_sky_cloud_coverage
     - sensor.dark_sky_dew_point
@@ -31,6 +32,12 @@ current_weather:
     - sensor.dark_sky_pressure
     - sensor.dark_sky_wind_bearing
     - sensor.dark_sky_wind_speed
+
+dateTime:
+  name: "Date & Time"
+  entities:
+    - sensor.date
+    - sensor.time
 
 furnace:
   name: Furnace
@@ -105,3 +112,10 @@ vacation_return_date:
   name: Vacation Return Date
   entities:
     - input_datetime.vacation_return_date
+
+z_wave_batt_card:
+  name: "Z-Wave"
+  entities:
+    - sensor.batt_freezer_door
+    - sensor.batt_furnace_motion
+    - sensor.batt_liesel

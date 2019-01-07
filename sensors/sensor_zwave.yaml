@@ -1,0 +1,16 @@
+- platform: template
+  sensors:
+    batt_freezer_door:
+      friendly_name: "Battery Freezer Door Sensor"
+      value_template: "{% if states.zwave.Door_Sensor_Freezer %} {{states.zwave.Door_Sensor_Freezer.attributes.battery_level}} {% else %} {% endif %}"
+      unit_of_measurement: "%"
+
+    batt_furnace_motion:
+      friendly_name: "Battery Furnace Motion Sensor"
+      value_template: "{% if states.zwave.IR_MOTION_FURNACE %} {{states.zwave.IR_MOTION_FURNACE.attributes.battery_level}} {% else %} {% endif %}"
+      unit_of_measurement: "%"
+
+    batt_liesel:
+      friendly_name: "Battery Liesel Room Sensor"
+      value_template: "{% if states.zwave.liesel_multi %} {{states.zwave.liesel_multi.attributes.battery_level}} {% else %} {% endif %}"
+      unit_of_measurement: "%"

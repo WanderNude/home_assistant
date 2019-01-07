@@ -4,24 +4,12 @@
 - alias: freezer_alert
   trigger:
     platform: state
-    entity_id: input_boolean.send_test_mail
+    entity_id: binary_sensor.door_sensor_freezer_sensor
     to: 'on'
+    for:
+      minutes: 5
   action:
     service: notify.homeNotification
     data:
       title: 'FREEZER ALERT'
       message: 'Freezer open for longer than 5 minutes!'
-
-
-#- alias: freezer_alert
-#  trigger:
-#    platform: state
-#    entity_id: binary_sensor.send_test_mail
-#    to: 'on'
-#    for:
-#      minutes: 5
-#  action:
-#    service: notify.homeNotification
-#    data:
-#      title: 'FREEZER ALERT'
-#      message: 'Freezer open for longer than 5 minutes!'

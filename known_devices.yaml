@@ -135,3 +135,11 @@ android38cecce6bc3d9e:
   name: android-38cecce6bc3d9e
   picture:
   track: false
+
+android8d2df4fee413a94a:
+  hide_if_away: false
+  icon:
+  mac: 78:A8:73:DF:0F:19
+  name: android-8d2df4fee413a94a
+  picture:
+  track: false

@@ -57,3 +57,10 @@ safety:
   entities:
     - group.freezer
     - automation.freezer_alert
+
+zwave_batt_view:
+  view: yes
+  name: "Z-Wave"
+  icon: "mdi:z-wave"
+  entities:
+    - group.z_wave_batt_card
