@@ -64,6 +64,12 @@ freezer:
     - sensor.ir_motion_laundry_power_management
     - sensor.ir_motion_laundry_sourcenodeid
 
+input_temperature:
+  name: "Set Temperature (Not Active)"
+  entities:
+    - input_number.daytime_temp
+    - input_number.nighttime_temp
+
 pihole:
   name: PiHole
   entities:

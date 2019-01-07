@@ -5,6 +5,15 @@
 #   MUST BE IN ORDER FOR DISPLAY TO BE IN
 # CORRECT ORDER ON HOME SCREEN
 ###########################################################
+default_view:
+  view: yes
+  name: "HOME"
+  entities:
+    - group.at_a_glance
+    - group.forecast
+    - history_graph.room_temperatures
+    - history_graph.outside_temperature
+
 thermostat:
   view: yes
   name: Thermostat
@@ -15,6 +24,7 @@ thermostat:
     - history_graph.room_temperatures
     - climate.linear_tbz48_thermostat_cooling_1
     - climate.linear_tbz48_thermostat_heating_1
+    - group.input_temperature
 
 weather:
   view: yes
