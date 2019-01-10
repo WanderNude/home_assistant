@@ -9,12 +9,12 @@ default_view:
   view: yes
   name: "HOME"
   entities:
-    - group.at_a_glance
-    - group.forecast
+    - group.at_a_glance_card
+    - group.forecast_card
     - history_graph.room_temperatures
     - history_graph.outside_temperature
 
-thermostat:
+view_thermostat:
   view: yes
   name: Thermostat
   icon: mdi:thermometer-lines
@@ -24,51 +24,58 @@ thermostat:
     - history_graph.room_temperatures
     - climate.linear_tbz48_thermostat_cooling_1
     - climate.linear_tbz48_thermostat_heating_1
-    - group.input_temperature
+#    - group.input_temperature_card
 
-weather:
+view_weather:
   view: yes
   name: Weather
   icon: mdi:weather-lightning-rainy
   entities:
-    - group.at_a_glance
-    - group.current_weather
-    - group.forecast
+    - group.at_a_glance_card
+    - group.current_weather_card
+    - group.forecast_card
     - history_graph.outside_temperature
 
-lights:
+view_liesel:
+  view: yes
+  name: "Liesel"
+  icon: mdi:owl
+  entities:
+    - group.liesel_card
+
+view_lights:
   view: yes
   name: Lights
   icon: mdi:lightbulb
   entities:
-    - group.furnace
+    - group.furnace_card
 
-presence:
+view_presence:
   view: yes
   name: Presence
   icon: mdi:google-maps
   entities:
-    - group.adults
+    - group.adults_card
     - input_boolean.away_mode
-    - group.vacation_return_date
+    - group.vacation_return_date_card
 
-network:
+view_network:
   view: yes
   name: Tech
   icon: mdi:server-network
   entities:
-    - group.pihole
-    - group.speedtest
+    - group.pihole_card
+    - group.SpeedTest_card
 
-safety:
+view_safety:
   view: yes
   name: Safety/Security
   icon: mdi:alert
   entities:
-    - group.freezer
+    - group.freezer_card
     - automation.freezer_alert
 
-zwave_batt_view:
+view_zwave_batt_view:
   view: yes
   name: "Z-Wave"
   icon: "mdi:z-wave"

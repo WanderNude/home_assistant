@@ -143,3 +143,11 @@ android8d2df4fee413a94a:
   name: android-8d2df4fee413a94a
   picture:
   track: false
+
+68c90b5eadab:
+  hide_if_away: false
+  icon:
+  mac: 68:C9:0B:5E:AD:AB
+  name: 68c90b5eadab
+  picture:
+  track: false

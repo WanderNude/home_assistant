@@ -1,13 +1,13 @@
 ###########################################################
 #                    GROUPS/CARDS
 ###########################################################
-adults:
+adults_card:
   name: Adults
   entities:
     - device_tracker.samsungsmg930a
     - device_tracker.samsungsmg930a_2
 
-at_a_glance:
+at_a_glance_card:
   name: "At A Glance"
   entities:
     - sensor.dark_sky_temperature
@@ -16,7 +16,7 @@ at_a_glance:
     - sensor.dark_sky_dew_point
     - sensor.dark_sky_wind_speed
 
-current_weather:
+current_weather_card:
   name: Weather
   entities:
     - sun.sun
@@ -33,19 +33,19 @@ current_weather:
     - sensor.dark_sky_wind_bearing
     - sensor.dark_sky_wind_speed
 
-dateTime:
+dateTime_card:
   name: "Date & Time"
   entities:
     - sensor.date
     - sensor.time
 
-furnace:
+furnace_card:
   name: Furnace
   entities:
     - binary_sensor.ir_motion_furnace_sensor
     - switch.furnace_light_switch
 
-forecast:
+forecast_card:
   name: Today's Forecast
   entities:
     - sensor.dark_sky_daytime_high_temperature
@@ -54,7 +54,7 @@ forecast:
     - sensor.dark_sky_overnight_low_apparent_temperature
     - sensor.dark_sky_precip_probability
 
-freezer:
+freezer_card:
   name: Freezer
   entities:
     - binary_sensor.door_sensor_freezer_sensor
@@ -64,28 +64,7 @@ freezer:
     - sensor.ir_motion_laundry_power_management
     - sensor.ir_motion_laundry_sourcenodeid
 
-input_temperature:
-  name: "Set Temperature (Not Active)"
-  entities:
-    - input_number.daytime_temp
-    - input_number.nighttime_temp
-
-pihole:
-  name: PiHole
-  entities:
-    - sensor.pihole_ads_blocked_today
-    - sensor.pihole_ads_percentage_blocked_today
-    - sensor.pihole_dns_queries_today
-
-SpeedTest:
-  name: SpeedTest
-  entities:
-    - sensor.speedtest_download
-    - sensor.speedtest_upload
-    - sensor.speedtest_ping
-    - history_graph.speedtest
-
-hidden:
+hidden_card:
   name: hidden_stuff
   entities:
     - sensor.door_sensor_freezer_alarm_level
@@ -101,7 +80,13 @@ hidden:
     - sensor.liesel_multi_sourcenodeid
     - sensor.liesel_multi_system
 
-Liesel:
+input_temperature_card:
+  name: "Set Temp (INACTIVE RACHEL DO NOT USE)"
+  entities:
+    - input_number.daytime_temp
+    - input_number.nighttime_temp
+
+liesel_card:
   name: Liesel
   entities:
     - binary_sensor.liesel_multi_sensor
@@ -114,7 +99,22 @@ Liesel:
     - sensor.liesel_multi_relative_humidity
     - sensor.liesel_multi_temperature
 
-vacation_return_date:
+pihole:
+  name: PiHole
+  entities:
+    - sensor.pihole_ads_blocked_today
+    - sensor.pihole_ads_percentage_blocked_today
+    - sensor.pihole_dns_queries_today
+
+SpeedTest_card:
+  name: SpeedTest
+  entities:
+    - sensor.speedtest_download
+    - sensor.speedtest_upload
+    - sensor.speedtest_ping
+    - history_graph.speedtest
+
+vacation_return_date_card:
   name: Vacation Return Date
   entities:
     - input_datetime.vacation_return_date
